@@ -166,7 +166,8 @@ exports.profileUpdate = (req, res) => {
 
   
     register.findOne({email}).then((data) => {
-        if (!data){
+        
+        if (!data||(data._id.toString()==req.cookies.id)){
             register.findByIdAndUpdate(id, { user, email }, { new: true }).then(data => {
                 if (!data) {
                     res.status(404).send({ message: `Cannot Update user with ${id}. Maybe user not found!` })

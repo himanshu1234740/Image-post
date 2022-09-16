@@ -61,7 +61,7 @@ router.get('/post', auth, (req, res) => {
 
   } else {
     axios.get('http://localhost:3000/api/users').then(function (response) {
-      res.render('post', { users: response.data.filter((post) => post.id == req.user._id),name: req.user })
+      res.render('post', { users: response.data.filter((post) => post.id == req.user._id)})
     }).catch(function (err) {
       console.log(err)
     })
