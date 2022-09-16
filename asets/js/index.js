@@ -94,8 +94,8 @@ function update(id) {
 
 
   axios.put(`api/users/${id}`, formdata).then(function (response) {
-    // window.location.href = '/';
-    console.log(response.data);
+    window.location.href = '/';
+    
 
   }).catch(function (error) {
     console.error(error);

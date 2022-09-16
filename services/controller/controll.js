@@ -122,7 +122,7 @@ exports.post = (req, res) => {
 
 }
 exports.readuser = (req, res) => {
-    console.log(req.body)
+    
     const { email, password } = req.body;
 
     register.findOne({ email }).then((data) => {
@@ -164,7 +164,7 @@ exports.profileUpdate = (req, res) => {
     const email = req.body.email;
     const id = req.params.id;
 
-    console.log(user, email, id);
+  
     register.findOne({email}).then((data) => {
         if (!data){
             register.findByIdAndUpdate(id, { user, email }, { new: true }).then(data => {

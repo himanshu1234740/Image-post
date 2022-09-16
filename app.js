@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const connect = require('./services/database/conncetion');
 const cookieParser = require('cookie-parser');
+const port = process.env.PORT || 3000;
 
 
 const path = require('path');
@@ -26,6 +27,6 @@ app.use(cookieParser());
 app.use('/', require('./services/router/router'))
 
 
-app.listen(3000, function(){
+app.listen(port, function(){
     console.log("listening on 3000...");
 })
