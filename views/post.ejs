@@ -1,0 +1,27 @@
+<%-include('partial/header') %>
+    <%-include('partial/nav') %>
+        <main>
+            <div class="container mt-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <% users.forEach(function(e){%>
+                        
+                        <div class="col" id="card" >
+                            <div class="card h-100" id="main" >
+                                <img id="img" src="../upload/<%= e.img%>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= e.title%></h5>
+                                    <p  class="card-text para"><%= e.desc.slice(0,30)%>...
+                                        
+                                    </p> 
+                                    <a class="detail__link" href="Detail?id=<%= e._id %>">Detail</a>
+                                </div>
+                                <img id="delete" onclick="del(`<%= e._id %>`)" height="20px" width="20px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMont9QkQ-NhyQO0mnkrsQVSB_rs9vJX8hAxcq5cM&s" alt="">
+                                <a href="update?id=<%= e._id %>"><img id="update" height="20px" width="20px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO-7a0zEnvlIIWdi_biDQksSPqSVcpY_1SuA&usqp=CAU" alt="..."></a>
+                            </div>
+                        </div>
+                        <%})%>
+                    </div>
+            </div>
+        </main>
+
+        <%-include('partial/footer') %>

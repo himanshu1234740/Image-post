@@ -1,0 +1,63 @@
+<%-include('partial/header') %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="post">Your Post</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+
+                        <li class="nav-item">
+                            <a id="profile_user" class="nav-link active" aria-current="page" href="profile">Hello <%=login_user.user.slice(0,12)%>... </a>
+                        </li>
+                        <li id="register_user" class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="register">Register</a>
+                        </li>
+                        
+                    </ul>
+                    <input class="form-control me-2" onkeyup="search()" id="input" type="text" placeholder="Search"
+                        aria-label="Search">
+                    <!-- <a href="#" class="btn btn-outline-success" id="btn" type="btn">Search</a> -->
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        
+        <form>
+            <div class="container formuser">
+                <div class="mb-3">
+                    <img id="user_logo"
+            src="https://images-eu.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SR50,50_.png"
+            class="card-img-top mt-2 " alt="...">
+        <div class="card-body">
+                    
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="user_profile" name="user_login" aria-describedby="emailHelp" value="<%=login_user.user%>" required>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email_profile"  value="<%=login_user.
+                        email%>" name="email_login" id="exampleInputPassword1"
+                            required>
+                    </div>
+                    
+                    <!-- <p><%=login_user._id%></p> -->
+
+                    <button onclick="update_profile(`<%=login_user._id%>`)" type="button" class="btn btn-dark">Edit Profile</button>
+                </div>
+                
+
+        </form>
+        <a href="logout" class="btn"id="logout" type="button">Logout User</a>
+    </main>
+    <%-include('partial/footer') %>

@@ -1,0 +1,287 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: whitesmoke
+}
+
+.container {
+    height: 400px
+}
+
+#img {
+    object-fit: cover;
+    max-width: 378px;
+    max-height: 250px
+}
+
+#card {
+    max-width: 500px;
+
+
+}
+
+#main {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#delete {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+#update {
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+}
+
+.det {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 400px;
+
+}
+
+#img_d {
+    object-fit: cover;
+    min-width: 400px;
+    min-height: 400px;
+    float: right;
+    box-shadow: 2px 4px 8px lightgrey;
+
+}
+
+#desc_d {
+    width: 700px;
+}
+
+.form {
+    text-decoration: none;
+    width: 450px;
+    border-radius: 15px;
+    background-color: rgb(251, 250, 248);
+    font-family: 'Courier New', Courier, monospace;
+    height: 450px;
+    box-shadow: 2px 4px 8px lightgrey;
+}
+
+#exist {
+    text-decoration: none;
+    margin-left: 150px;
+
+    padding: 10px
+}
+
+.addpost {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+
+#username {
+    position: absolute;
+    left: 67%;
+}
+
+#user_logo {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: 186.6px;
+}
+
+.formuser {
+    margin-top: 96px;
+    text-decoration: none;
+    width: 450px;
+    border-radius: 15px;
+    background-color: rgb(251, 250, 248);
+    font-family: 'Courier New', Courier, monospace;
+    height: 296px;
+    box-shadow: 2px 4px 8px lightgrey;
+}
+
+#profile_user {
+    position: absolute;
+    left: 62%;
+}
+
+.detail__link {
+    text-decoration: none;
+    color: #fff;
+    background: rgb(68, 156, 234);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.detail__link:hover {
+    color: #000;
+}
+
+#logout {
+    text-align: center;
+    width: 99.9%;
+    height: 37px;
+    margin-top: 32px;
+    background-color: rgb(178, 178, 178);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+#logout:hover {
+    color: white;
+}
+
+.forget {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
+#forget_password {
+    margin-left: 156px;
+    text-decoration: none;
+    color: rgb(23, 133, 228)
+}
+
+.forget_password {
+    text-decoration: none;
+    width: 350px;
+    border-radius: 15px;
+    background-color: rgb(251, 250, 248);
+
+    height: 310px;
+    box-shadow: 2px 4px 8px lightgrey;
+}
+
+#create_account {
+    text-decoration: none;
+    margin-left: 40px;
+
+    padding: 10px
+}
+
+.form_form {
+    text-decoration: none;
+    width: 450px;
+    border-radius: 15px;
+    background-color: rgb(251, 250, 248);
+    font-family: 'Courier New', Courier, monospace;
+    height: 350px;
+    margin-top: 80px;
+    box-shadow: 2px 4px 8px lightgrey;
+}
+
+@media only screen and (max-width: 600px) {
+    #input {
+        width: 227px;
+        height: 30px;
+        margin-top: 46px;
+    }
+
+    #username {
+        position: absolute;
+        left: 0;
+    }
+
+    .form_form {
+        text-decoration: none;
+        width: 324px;
+        border-radius: 15px;
+        background-color: rgb(251, 250, 248);
+        font-family: 'Courier New', Courier, monospace;
+        height: 350px;
+        margin-top: 60px;
+        box-shadow: 2px 4px 8px lightgrey;
+    }
+
+    #create_account {
+        text-decoration: none;
+        margin-left: 20px;
+
+        padding: 0px
+    }
+
+    .form {
+        text-decoration: none;
+        width: 300px;
+        border-radius: 15px;
+        background-color: rgb(251, 250, 248);
+        font-family: 'Courier New', Courier, monospace;
+        height: 450px;
+        margin-top: 60px;
+        box-shadow: 2px 4px 8px lightgrey;
+    }
+
+    #exist {
+        text-decoration: none;
+        margin-left: 100px;
+        padding: 0px;
+    }
+
+    .formuser {
+        margin-top: 50px;
+        text-decoration: none;
+        width: 300px;
+        border-radius: 15px;
+        background-color: rgb(251, 250, 248);
+        font-family: 'Courier New', Courier, monospace;
+        height: 296px;
+        box-shadow: 2px 4px 8px lightgrey;
+    }
+    #logout {
+        text-align: center;
+        width: 99.9%;
+        height: 37px;
+        margin-top: 32px;
+        background-color: rgb(178, 178, 178);
+        border: none;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      #user_logo {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin-left: 117.6px;
+      }
+      .forget_password {
+        width: 290px;
+       
+      }
+      #profile_user {
+        position: absolute;
+        left: 0%;
+      }
+      #register_user{
+        margin-top: 50px;
+      }
+      .det {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 320px;
+        
+    }
+    #desc_d {
+        width: 310px;
+      }
+      #img_d {
+        object-fit: cover;
+        min-width: 320px;
+        min-height: 320px;
+        
+        box-shadow: 2px 4px 8px lightgrey;
+      }
+}

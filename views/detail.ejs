@@ -1,0 +1,19 @@
+<%-include('partial/header') %>
+    <%-include('partial/nav') %>
+        <div class="container mt-5 ">
+            <div class=" card det"  style="width: 18rem;">
+                <img id="img_d" src="../upload/<%=detail.img %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="title_d" class="card-title">
+                        <%=detail.title %>
+                    </h5>
+                    <p id="desc_d">
+                        <%=detail.desc %>
+                    </p>
+    
+                </div>
+            </div>
+        </div>
+        
+
+        <%-include('partial/footer') %>

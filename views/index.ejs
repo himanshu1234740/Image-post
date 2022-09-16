@@ -1,0 +1,31 @@
+
+<%-include('partial/header') %>
+<%-include('partial/nav') %>
+    <main>
+        
+        <div class="container">
+            <a  href="addpost" class="btn btn-outline-success addpost ">Add New Post</a>  
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <% users.forEach(function(e){%>
+                    
+                    <div class="col" id="card" >
+                        <div class="card h-100" id="main" >
+                            <img id="img" src="../upload/<%= e.img%>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= e.title%></h5>
+                                <p  class="card-text para"><%= e.desc.slice(0,30)%>...
+                                    
+                                </p> 
+                                <a class="detail__link" href="Detail?id=<%= e._id %>">Detail</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <%})%>
+                </div>
+            </div>
+            
+        </main>
+        <%-include('partial/footer') %>
+        
+

@@ -1,0 +1,21 @@
+<%-include('partial/header') %>
+<%-include('partial/nav') %>
+<div class="container mt-2">
+    <form  enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Image</label>
+            <input type="file" class="form-control" name="img" id="email"
+                aria-describedby="emailHelp" required>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Title</label>
+                    <input type="text" name="title" class="form-control" id="title" required>
+                </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Descriptions</label>
+                <input type="text" name="desc" class="form-control" id="desc" required>
+            </div>
+            
+            <button type="button" onclick="post()" class="btn btn-outline-dark">Post</button>
+    </form>
+</div>
+<%-include('partial/footer') %>

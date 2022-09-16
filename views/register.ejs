@@ -1,0 +1,27 @@
+<%-include('partial/header') %>
+<%-include('partial/nav') %>
+    <form>
+        <div class="container mt-4 form">
+            <div class="mb-3">
+                <h3>Register User</h3>
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="user" name="user"  aria-describedby="emailHelp" required >
+                <div class="mb-3"  >
+                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" id="exampleInputPassword1" required >
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" id="exampleInputPassword1" required >
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="cpassword" name="cpassword" id="exampleInputPassword1" required >
+                </div>
+                
+                <button type="button" onclick="register()"  class="btn btn-dark">Register</button>
+            </div>
+            <a id="exist" href="login"> User Login ?</a>
+        </form>
+                
+    <%-include('partial/footer') %>

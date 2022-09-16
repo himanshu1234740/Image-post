@@ -1,0 +1,32 @@
+<%-include('partial/header') %>
+    <%-include('partial/nav') %>
+        <form>
+            <div class="container form_form">
+                <div class="mb-3">
+                    <h3>Login User</h3>
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="user_login" aria-describedby="emailHelp"
+                        required>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email_login"
+                            id="exampleInputPassword1" required>
+                    </div>
+                    <div class="mb-3">
+                        <div class="forget">
+                            
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <a href="forget" id="forget_password" >Forget password</a>
+                        </div>
+                        <input type="password" class="form-control" id="password" name="password_login"
+                            id="exampleInputPassword1" required>
+                    </div>
+
+
+                </div>
+                
+        </form>
+        <button type="button" onclick="login()" class="btn btn-dark">Login</button>
+        <a id="create_account" href="/register">Create New Account?</a>
+
+        <%-include('partial/footer') %>

@@ -1,0 +1,21 @@
+<%-include('partial/header') %>
+<%-include('partial/nav') %>
+<div class="container mt-4" >
+    <form>
+        <div class="mb-3">
+            <label for="update_img" class="form-label">Image</label>
+            <input type="file" id="update_img" class="form-control" name="img"
+                aria-describedby="emailHelp"  required>
+                <div class="mb-3">
+                    <label for="update_desc" class="form-label">Title</label>
+                    <input type="text" value="<%=users.title %>" id="update_title" name="desc" class="form-control" required>
+                </div>
+            <div class="mb-3">
+                <label for="update_desc" class="form-label">Descriptions</label>
+                <input type="text" value="<%=users.desc %>" id="update_desc" name="desc" class="form-control" required>
+            </div>
+
+            <button type="button" onclick="update(`<%=users._id %>`)" class="btn btn-outline-dark">Update</button>
+    </form>
+</div>
+<%-include('partial/footer') %>
