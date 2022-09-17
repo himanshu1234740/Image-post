@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 router.get('/', function (req, res) {
-  axios.get('http://localhost:3000/api/users').then(function (response) {
+  axios.get('https://post-image.herokuapp.com/api/users').then(function (response) {
     res.render('index', { users: response.data })
   }).catch(function (err) {
     console.log(err)
@@ -29,7 +29,7 @@ router.get('/', function (req, res) {
 })
 router.get('/update', (req, res) => {
 
-  axios.get('http://localhost:3000/api/users/', { params: { id: req.query.id } }).then(function (response) {
+  axios.get('https://post-image.herokuapp.com/api/users/', { params: { id: req.query.id } }).then(function (response) {
 
     res.render('update', { users: response.data })
   }).catch((err) => {
@@ -38,7 +38,7 @@ router.get('/update', (req, res) => {
 })
 
 router.get('/Detail', (req, res) => {
-  axios.get('http://localhost:3000/api/users', { params: { id: req.query.id } }).then((response) => {
+  axios.get('https://post-image.herokuapp.com/api/users', { params: { id: req.query.id } }).then((response) => {
     res.render('detail', { detail: response.data })
   }).catch((err) => {
     console.log(err)
@@ -60,7 +60,7 @@ router.get('/post', auth, (req, res) => {
     res.status(500).render('post')
 
   } else {
-    axios.get('http://localhost:3000/api/users').then(function (response) {
+    axios.get('https://post-image.herokuapp.com/api/users').then(function (response) {
       res.render('post', { users: response.data.filter((post) => post.id == req.user._id)})
     }).catch(function (err) {
       console.log(err)
@@ -103,7 +103,7 @@ router.get('/profile', auth, (req, res) => {
   }
 })
 router.get('/forget', (req, res)=>{
-  // axios.get('http://localhost:3000/api/forget').then(()=>{
+  // axios.get('https://post-image.herokuapp.com/api/forget').then(()=>{
   //   res.send(data);
   // })
   res.render('forget')
