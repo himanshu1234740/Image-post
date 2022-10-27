@@ -8,13 +8,14 @@ body {
 }
 
 .container {
-    height: 400px
+    height: 600px
+
 }
 
 #img {
     object-fit: cover;
-    max-width: 378px;
-    max-height: 250px
+    max-width: 100%;
+    max-height: 300px
 }
 
 #card {
@@ -86,7 +87,7 @@ body {
 
 #username {
     position: absolute;
-    left: 67%;
+    left: 71.3%;
 }
 
 #user_logo {
@@ -108,8 +109,7 @@ body {
 }
 
 #profile_user {
-    position: absolute;
-    left: 62%;
+    margin-right: 1rem;
 }
 
 .detail__link {
@@ -196,7 +196,7 @@ body {
 
     .form_form {
         text-decoration: none;
-        width: 324px;
+        width: 260px;
         border-radius: 15px;
         background-color: rgb(251, 250, 248);
         font-family: 'Courier New', Courier, monospace;
@@ -258,7 +258,12 @@ body {
       }
       .forget_password {
         width: 290px;
-       
+        
+      }
+      #forget_password{
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        font-size: 15px
       }
       #profile_user {
         position: absolute;
@@ -283,5 +288,8 @@ body {
         min-height: 320px;
         
         box-shadow: 2px 4px 8px lightgrey;
+      }
+      .btn{
+        color: white;
       }
 }
