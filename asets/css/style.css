@@ -84,12 +84,16 @@ body {
     margin-bottom: 12px;
     margin-right: 12px;
 }
-
+.accountUser{
+    position: relative;
+}
 #username {
     position: absolute;
-    left: 71.3%;
+    left: -3rem;
 }
-
+.navbar{
+    position: relative;
+}
 #user_logo {
     border-radius: 50%;
     height: 50px;

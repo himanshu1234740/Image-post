@@ -24,7 +24,7 @@ if (get_cookie) {
       remainStr += first_letter[i];
     }
     let sort = remainStr.slice(0, 11);
-    document.getElementById("username").innerHTML = "My Account";
+    document.getElementById("username").innerHTML = `My Account`;
 
     document.getElementById("login_user").style.visibility = "hidden";
   }
